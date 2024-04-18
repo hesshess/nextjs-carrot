@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hello World example
 
-## Getting Started
+## How to use
 
-First, run the development server:
+### Using `create-next-app`
+
+Execute [`create-next-app`](https://github.com/segmentio/create-next-app) with [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) or [npx](https://github.com/zkat/npx#readme) to bootstrap the example:
 
 ```bash
-npm run dev
+npx create-next-app --example hello-world hello-world-app
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+yarn create next-app --example hello-world hello-world-app
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Download manually
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Download the example:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+curl https://codeload.github.com/zeit/next.js/tar.gz/canary | tar -xz --strip=2 next.js-canary/examples/hello-world
+cd hello-world
+```
 
-## Learn More
+Install it and run:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm install
+npm run dev
+# or
+yarn
+yarn dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Deploy it to the cloud with [now](https://zeit.co/now) ([download](https://zeit.co/download))
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+now
+```
 
-## Deploy on Vercel
+## The idea behind the example
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This example shows the most basic idea behind Next. We have 2 pages: `pages/index.js` and `pages/about.js`. The former responds to `/` requests and the latter to `/about`. Using `next/link` you can add hyperlinks between them with universal routing capabilities. The `day` directory shows that you can have subdirectories.
